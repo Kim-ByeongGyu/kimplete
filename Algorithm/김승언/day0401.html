@@ -1,0 +1,90 @@
+<!-- test 1 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number1 = parseInt(prompt("첫 번째 숫자를 입력하세요: "));
+      let number2 = parseInt(prompt("두 번째 숫자를 입력하세요: "));
+
+      if (number1 < number2) console.log(number2);
+      else console.log(number1);
+    </script>
+  </body>
+</html>
+
+<!-- test 2 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let score = parseInt(prompt("점수를 입력하세요 : "));
+
+      switch (parseInt(score / 10)) {
+        case 10:
+        case 9:
+          console.log("A");
+          break;
+        case 8:
+          console.log("B");
+          break;
+        case 7:
+          console.log("C");
+          break;
+        case 6:
+          console.log("D");
+          break;
+        default:
+          console.log("F");
+          break;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- test 3 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let month = parseInt(prompt("월을 입력하세요 : "));
+
+      switch (month) {
+        case 12:
+        case 1:
+        case 2:
+          console.log("겨울");
+          break;
+        case 3:
+        case 4:
+        case 5:
+          console.log("봄");
+          break;
+        case 6:
+        case 7:
+        case 8:
+          console.log("여름");
+          break;
+        case 9:
+        case 10:
+        case 11:
+          console.log("가을");
+          break;
+      }
+    </script>
+  </body>
+</html>
