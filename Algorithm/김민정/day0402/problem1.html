@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제2</title>
+</head>
+<body>
+    <script>
+        //1.주어진 숫자 배열의 모든 요소를 콘솔에 출력하는 코드를 작성하세요.
+        const numbers1 = [1,2,3,4,5];
+        numbers1.forEach((num) => console.log(num));
+        
+        //2.주어진 객체의 모든 프로퍼티와 그 값을 콘솔에 출력하는 코드를 작성하세요.
+        const person1 = {
+            name: '홍길동',
+            age: 25
+        }
+        for(let key in person1){
+            console.log(`${key}: ${person1[key]}`);
+        }
+
+        //3.숫자 배열이 주어졌을 때, 배열 안에 특정 숫자가 몇 개 있는지 세는 코드를 작성하세요.
+        const numbers2 = [1,3,7,8,3,3,4,3];
+        const targetNumber = 3;
+        let count = 0;
+        numbers2.forEach((num) => {
+            if(num == targetNumber){
+                count++;
+            }
+        });
+        console.log(count);
+
+        //4.숫자 배열에서 가장 큰 숫자를 찾는 코드를 작성하세요.
+        const numbers3 = [10,36,54,89,12];
+        let max = numbers3[0];
+        numbers3.forEach((num) => {
+            if(num > max){
+                max = num;
+            }
+        });
+        console.log(max);
+
+        //5.주어진 객체 배열에서 나이가 30 이상인 사람들만 찾아 새 배열을 만드는 코드를 작성하세요.
+        const person2 = [
+            {name: 'A', age: 25},
+            {name: 'B', age: 30},
+            {name: 'C', age: 28},
+            {name: 'D', age: 35},
+        ]
+        const array = [];
+        person2.forEach((person) => {
+            if(person.age >= 30){
+                array.push(person);
+            }
+        });
+        console.log(array);
+    </script>
+</body>
+</html>
