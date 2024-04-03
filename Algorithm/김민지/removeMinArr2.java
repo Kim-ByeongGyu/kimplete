@@ -2,9 +2,13 @@ package org.example;
 
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.LinkedList;
 
+/*
+    List 인터페이스를 implements하는 ArrayList, LinkedList 자료구조
+ */
 public class removeMinArr2 {
     public static void ArrayListTest(){
         List arrList = new ArrayList<String>();
@@ -20,9 +24,21 @@ public class removeMinArr2 {
         System.out.println(arrList.getLast()); // second
 
 
+        arrList.add("az");
+        System.out.println("sort before");
         for (int idx = 0; idx < arrList.size(); idx++){
             System.out.println(arrList.get(idx)); // abc, second
         }
+
+
+
+        Collections.sort(arrList);
+
+        System.out.println("sort after");
+        for (int idx = 0; idx < arrList.size(); idx++){
+            System.out.println(arrList.get(idx)); // abc, second
+        }
+
     }
 
     public static void LinkedListTest(){
@@ -45,11 +61,9 @@ public class removeMinArr2 {
         }
 
     }
-//    public static void streamAPITest(){
-//
-//    }
+
     public static void main(String[] args) {
-         // ArrayListTest();
-        LinkedListTest();
+         ArrayListTest();
+        //LinkedListTest();
     }
 }
