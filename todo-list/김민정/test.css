@@ -1,0 +1,12 @@
+.checked {
+    text-decoration: line-through;
+    color: #adb5bd;
+}
+.remove {
+    color: #e64980;
+    font-weight: 600;
+    opacity: 0;
+}
+.todo-item:hover .remove {
+    opacity: 1;
+}
