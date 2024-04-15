@@ -2,6 +2,7 @@ package com.example.bankSystem;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Bank {
     String name;
@@ -15,9 +16,9 @@ public class Bank {
         accountList.add(accountExam02);
     }
 
-    public void addAccount(String name, int accountNumber, int password) {
-        Object[] temp = {name, accountNumber, password};
-        accountList.add(temp);
+    public void addAccount(Object[] newAccount) {
+        accountList.add(newAccount);
+        System.out.println(name + "님 명의로 계좌가 개설되었습니다.");
     }
 
     public void searchAccount(int accountNumber) {
@@ -33,4 +34,13 @@ public class Bank {
         System.out.println("계좌번호 " + accountNumber + "에 해당하는 사용자를 찾지 못했습니다.");
     }
 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Banker banker = new Banker();
+        Object[] newAccount = new Object[3];
+        newAccount[0] = sc.next();
+        newAccount[1] = sc.nextInt();
+        newAccount[2] = sc.nextInt();
+        banker.개설승인(new Bank("우리은행"), newAccount);
+    }
 }
